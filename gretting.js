@@ -25,7 +25,12 @@ function askForName() {
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+    greeting.innerText = `Helloo ${text}`;
+    const span = document.createElement('span');
+    span.innerText = 'You can do it';
+    greeting.appendChild('span');
+    
+    
 }
 
 function loadName() { 
