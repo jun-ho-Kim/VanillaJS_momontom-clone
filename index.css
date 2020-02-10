@@ -7,7 +7,6 @@ body {
 
 body {
     background-color: #2ecc71;
-    
 }
 .container{
     width:100%;
@@ -15,16 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: fixed;
-    top:30vh;
-    left: 80vh; */
-    
-    /* width:300px; */
-    
 }
-.box{ 
-    background-color: #c7ecee;
-    border-radius: 10px;
+.box{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,25 +29,30 @@ body {
     font-weight: 600;
 }
 .greetings {
+    margin:0px;
     position: absolute;
-    top:-100px;
-    left: 0px;
-    background-color: white;
+    top:-130px;
+    left: 10px;
     color: #f0932b;
-    width: 150px;
-    height: 50px;
-    text-align: center;    
+    padding: 12px 10px;   
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-.greetingsNameColor{
+.todayISFamouSaying{
+    font-weight: 600;
+    opacity: 0.9;
+    border-radius: 10px;
+    width:65%;
+    position: absolute;
+    top:-90px;
+    left:20px;
+    padding:3px 0px 3px 5px;
+    margin:0px;
+    color: #57606f;
+    background-color: #ced6e0;
+}
+.fighting{
     color: orange;
 }
-/* .form{
-    display: block;
-} */
 .clock{
     font-size: 35px;
     text-shadow: 6px 6px 3px rgba(0, 0, 0, 0.2);
@@ -64,23 +60,35 @@ body {
 }
 .clock .js-title{
     color: #eb4d4b;
+    opacity: 1.3;
+    margin:25px;
 }
 .js-toDoList{
+    font-weight: bold;
+    opacity: 0.6;
     list-style: none;  
+    background-color: #dfe4ea;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding:3px 0px 3px 8px;
 }
 
 .js-toDoForm input {
     margin: 0px 20px;
 }
-
-
-
-
+.toDoList {
+    padding-bottom:5px;
+}
 .btn {
     cursor : pointer;
-    background-color: #eb4d4b;
-    margin-left: 10px;
+    background-color: #df6563;
+    margin-left: 20px;
+    border-radius: 20px;
+    position: absolute;
+    right: 20px;
+    /* margin-bottom: 100px */
 }
+
 h1 {
     color: #34495e;
     transition: color 0.5s ease-in-out;
@@ -89,7 +97,6 @@ h1 {
 .clicked {
     color: #7f8c8d;
 }
-
 .form,
 .greetings {
     display: none;

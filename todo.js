@@ -5,23 +5,17 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 const TODOS_LS = 'toDos';
 let toDos = [];
 
-
 function deleteToDo(event) {
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
     const cleanToDos = toDos.filter(function(toDo){
         return toDo.id !== parseInt(li.id);
-        console.log(toDo);
-        console.log(li);
-        console.log(cleanToDos);
     });
     toDos = cleanToDos;
     saveToDos();
-    console.log(cleanToDos);
     }
     
-
 function saveToDos() {
     localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
 }
@@ -31,6 +25,7 @@ function paintToDo(text) {
     const delBtn = document.createElement("button");
     delBtn.innerText = "❌";
     delBtn.addEventListener("click", deleteToDo);
+    delBtn.classList.add('btn');
     const span = document.createElement("span");
     const newId = toDos.length + 1;
     span.innerHTML = text;
@@ -52,9 +47,6 @@ function handleSubmit(event) {
     paintToDo(currentValue);
     toDoInput.value = "";
 }
-function something(toDo) {
-    console.log(toDo.text);
-}
 
 function loadToDos () {
     const loadedToDos = localStorage.getItem(TODOS_LS);
@@ -65,7 +57,6 @@ function loadToDos () {
         });
     }
 }
-
 
 function init() {
     loadToDos();

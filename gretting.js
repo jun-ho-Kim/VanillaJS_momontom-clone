@@ -1,7 +1,7 @@
 const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
     greeting = document.querySelector(".js-greetings");
-
+    todayISFamouSaying = document.querySelector(".js-todayISFamouSaying");
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
 
@@ -21,16 +21,11 @@ function askForName() {
     form.addEventListener("submit", handleSubmit);
 }
 
-
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Helloo ${text}`;
-    const span = document.createElement('span');
-    span.innerText = 'You can do it';
-    greeting.appendChild('span');
-    
-    
+    greeting.innerText = `Hello ${text}`;
+    todayISFamouSaying.innerText = `God doesn't require us to succeed; he only requires that you try.`; 
 }
 
 function loadName() { 
@@ -40,12 +35,10 @@ function loadName() {
     } else {
         paintGreeting(currentUser);
     }
-
 }
 
 
 function init() {
     loadName();
 }
-
 init();
